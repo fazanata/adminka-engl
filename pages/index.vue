@@ -4,6 +4,8 @@
     <h2>Категории</h2>
     <nuxt-link to="/section">Список категорий</nuxt-link>
     <nuxt-link to="/section/create">Добавить категорию</nuxt-link>
+    <h2>Уроки</h2>
+    <nuxt-link to="/lesson/create">Добавить урок</nuxt-link>
     <h2>Пользователи</h2>
     <nuxt-link to="/user">Список пользователей</nuxt-link>
     <hr/>

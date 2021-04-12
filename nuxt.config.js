@@ -37,10 +37,21 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/proxy',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    proxy: true
+  },
+
+  proxy: {
+    //'/api/': 'http://localhost/eng/api/'
+    '/api': { target: 'http://localhost/eng/api', pathRewrite: {'^/api': ''} }
+  },
+  plugins: [
+    '@/plugins/antd-ui', '@/plugins/multi-select'
+   ],
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},

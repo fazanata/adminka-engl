@@ -39,10 +39,12 @@ export default {
         descr_section: this.descr_section,
         type: this.type
       };
-      axios.post(`${process.env.baseUrl}/section/create.php`, formData).then(
+      axios.post(`/api/section/create.php`, formData).then(
+
           setTimeout(() => {
               this.$router.push(`/section/`)
           }, 500)
+          
       )
     },
   },
