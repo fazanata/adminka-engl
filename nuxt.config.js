@@ -1,4 +1,5 @@
 export default {
+  ssr: false,
   env: {
     baseUrl: process.env.BASE_URL,
   },
@@ -46,8 +47,8 @@ export default {
   },
 
   proxy: {
-    //'/api/': 'http://localhost/eng/api/'
-    '/api': { target: 'http://localhost/eng/api', pathRewrite: {'^/api': ''} }
+    //'/api/': 'http://localhost/eng/api'
+    '/api': { target: process.env.BASE_URL, pathRewrite: {'^/api': ''} }
   },
   plugins: [
     '@/plugins/antd-ui', '@/plugins/multi-select'
